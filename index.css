@@ -1,0 +1,139 @@
+:root{
+--drop-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+--drop-shadow-hover: 0px 3px 12px 3px rgba(0, 0, 0, 0.2);
+--drop-shadow-inner: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+img.pokemon-icon{
+    height: 40px;
+    padding: 2rem;
+}
+.pokemon-search{
+    border: 0ch;
+    border-color: aliceblue;
+    background-color: #F6F5FD;
+    color: black;
+    outline: none;
+}
+nav {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #fff; 
+  z-index: 1000; 
+}
+div.left{
+    padding: auto;
+}
+.button{
+    background-color:#F6F5FD;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+
+img.search-img{
+    height: 12px;
+    margin-top: 4px;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    border-style: inset;
+    border-width: 1px;
+    box-shadow: 1rem;
+  }
+
+  .container {
+    background-color: var(--grayscale-white);
+    box-shadow: var(--drop-shadow-inner);
+    border-radius: 0.75rem;
+    min-height: calc(85.5% - 1rem);
+    width: calc(100% - 1rem);
+    overflow-y: auto;
+    padding-top: 1rem;
+    height: max-content
+  }
+  
+  .pokemon-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0rem;
+  }
+  
+  .list-item {
+    border-radius: 8px;
+    box-shadow: var(--drop-shadow);
+    background-color: var(--grayscale-white);
+    width: 8.85rem;
+    height: 8.85rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .list-item .card-title {
+    margin: 0;
+    text-align: center;
+    padding: 0px;
+    color: var(--grayscale-medium);
+  }
+  
+  .list-item .card-text {
+    border-radius: 7px;
+    background-color: var(--grayscale-background);
+    padding: 24px 8px 4px 8px;
+    color: var(--grayscale-dark);
+    margin-top: -18px;
+  }
+  
+  .list-item .card-img-top {
+    width: 72px;
+    height: 72px;
+    margin: auto;
+  }
+  
+  .list-item .card-img-top img {
+    width: 100%;
+    height: 100%;
+  }
+.row-cols-3{
+  display: flex;
+
+}
+
+.load{
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: rgb(215, 106, 106);
+  align-items: center;
+  color: #F6F5FD;
+  cursor: pointer;
+
+
+}
