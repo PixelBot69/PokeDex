@@ -2,21 +2,26 @@ const pokemoncard = document.querySelector(".pokemon-card");
 const pokemonsearch = document.querySelector("#searchpoke");
 const pokemonidnotfound = document.querySelector("#not-found");
 const button = document.querySelector(".load");
+const scroll= document.querySelector(".top");
 
 let allPokemons = [];
 let getPokemon = 0; 
 
 async function fetchAndDisplayPokemons(getPokemon) {
   try {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${getPokemon === 0 ? 0 : getPokemon * 10}`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=50&offset=${getPokemon === 0 ? 0 : getPokemon * 10}`);
     const data = await response.json();
     const newPokemons = data.results;
-    allPokemons = [...allPokemons, ...newPokemons];
+
+    allPokemons.push(...newPokemons);
+
     displayPokemons(allPokemons);
   } catch (error) {
     console.error('Error fetching or displaying pokemons:', error);
   }
 }
+
+
 
 fetchAndDisplayPokemons(getPokemon); 
 
@@ -87,5 +92,10 @@ button.addEventListener("click", () => {
   fetchAndDisplayPokemons(getPokemon);
 });
 
-
+scroll.addEventListener('click',()=>{
+  window.scrollTo({
+    top : 0,
+    behavior: 'smooth'
+  })
+})
 //"https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${pokemonID}.svg
